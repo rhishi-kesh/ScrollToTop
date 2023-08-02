@@ -1,0 +1,92 @@
+html{
+	scroll-behavior: smooth;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+header{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('img.jpg');
+}
+nav{
+	height: 10vh;
+	background: transparent;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+}
+nav .logo{
+	width: 20%;
+	float: left;
+	margin-top: 20px;
+}
+nav .logo a{
+	margin-left: 100px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	font-family: fantasy !important;
+	margin-top: -80px;
+}
+nav .nav-item{
+	width: 80%;
+	float: left;
+	margin-top: 25px;
+}
+nav .nav-item ul{
+	text-align: right;
+	margin-right: 100px;
+}
+nav .nav-item ul li{
+	display: inline-block;
+	margin-left: 20px;
+}
+nav .nav-item ul li a{
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+}
+.sticky{
+	background: #fff;
+	border-bottom: 1px solid #000;
+}
+.sticky .nav-item ul li a{
+	color: #000;
+}
+.sticky .logo a{
+	color: #000;
+}
+section.red-section{
+	height: 100vh;
+	width: 100%;
+	background: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	text-transform: uppercase;
+}
+section.green-section{
+	height: 100vh;
+	width: 100%;
+	background: green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	text-transform: uppercase;
+}
+section.black-section{
+	height: 100vh;
+	width: 100%;
+	background: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	text-transform: uppercase;
+}

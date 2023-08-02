@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sitcky nav</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		.backtop{
+			position: sticky;
+			bottom: 40px;
+			left: 90%;
+			width: 50px;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			background: #098;
+			pointer-events: none;
+			opacity: 0;
+		}
+		.backtop a{
+			text-decoration: none;
+			color: #fff;
+		}
+		.active{
+			pointer-events: unset;
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="logo">
+				<a href="#">LoGo</a>
+			</div>
+			<div class="nav-item">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Service</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<section class="red-section">
+		<div>
+			<h1>red</h1>
+		</div>
+	</section>
+	<section class="green-section">
+		<div>
+			<h1>green</h1>
+		</div>
+	</section>
+	<section class="black-section">
+		<div>
+			<h1>black</h1>
+		</div>
+	</section>
+	<div class="backtop" id="backtop">
+		<a href="#">
+			Top
+		</a>
+	</div>
+
+
+
+	<script type="text/javascript">
+		const nav = document.querySelector('nav');
+
+		window.addEventListener('scroll',() =>{
+			nav.classList.toggle('sticky', window.scrollY > 10);
+		});
+
+		let backtop = document.querySelector('#backtop');
+		window.onscroll = function(){
+			backtop.classList.toggle('active', window.scrollY > 100);
+		}
+	</script>
+</body>
+</html>
